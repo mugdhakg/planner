@@ -1,0 +1,131 @@
+/*DOT STYLING*/
+.dot {
+  height: 468px;
+  width: 468px;
+  background-color: #343A5A;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: 390px;
+  position: relative;
+}
+
+/*LOGIN PAGE STYLING*/
+.login {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.login h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: fantasy;
+  color: #FFB25E;
+  font-size: 35px;
+}
+
+.login input {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login button {
+  width: 120px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: #FFB25E;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.login button:hover {
+  background-color: #D396E2;
+}
+
+
+/*NAVBAR STYLING*/
+.navbar ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #343A5A;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links li {
+  float: left;
+  padding: 10px 10px;
+}
+
+.nav-links a {
+  color: #FFB25E;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links li:hover {
+  background-color: #BFDEE8;
+  color: #343A5A;
+}
+
+/*TABLE STYLINE*/
+.my-table {
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.my-table th, .my-table td {
+  border: 1px solid;
+  border-color: #333;
+  padding: 8px;
+  text-align: left;
+}
+
+#table_head {
+  /*background-color: #123524;*/
+  background-color: rgb(79, 121, 66);
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.my-table tbody tr:nth-child(even) {
+  background-color: #96A691;
+}
+
+.buttonOne {
+  margin-top: 10px;
+  background-color: #96A691;
+  color: black;
+  font-size: 12px;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+#one {
+  text-align: center;
+  font-family: fantasy;
+  font-style: italic;
+  color: #FFB25E;
+  font-size: 25px;
+}
