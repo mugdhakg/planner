@@ -8,16 +8,16 @@ function Navbar() {
         <nav className="navbar">
         <ul className="nav-links">
           <Link to="/">
-            <li>Home</li>
+            <li>Dashboard</li>
           </Link>
           <Link to="/MyEvents">
             <li>My Events</li>
           </Link>
-          <Link to="/My Reminders">
-            <li>My Reminders</li>
+          <Link to="/MyToDo">
+            <li>My To-Do</li>
           </Link>
-          <Link to="/My Journal">
-            <li>My Journal</li>
+          <Link to="/MyNotes">
+            <li>My Notes</li>
           </Link>
           <Link to="/Logout">
             <li>Logout</li>
