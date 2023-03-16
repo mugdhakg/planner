@@ -1,5 +1,4 @@
-import { Link, BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Link, BrowserRouter, Route, Switch, useHistory, useEffect, useState } from 'react-router-dom';
 import Login from './Login';
 import { authenticated } from './Login';
 import NewEventForm from './NewEventForm';
@@ -26,6 +25,7 @@ function MyEvents() {
               <th>Event Name</th>
               <th>Event Date</th>
               <th>Event Time</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody id="table_body">
@@ -56,6 +56,7 @@ function getData() {
     <td>${values.event_name}</td>
     <td>${values.event_date}</td>
     <td>${values.event_time}</td>
+    <td>${values.status}</td>
     </tr>`
     });
     document.getElementById("table_body").innerHTML = tableData;

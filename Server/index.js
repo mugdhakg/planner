@@ -22,6 +22,10 @@ app.get("/load", (req, res) =>{
     res.send(result);
   });
 });
+/*
+app.put("/status", (req, res) => {
+  const selectedOption = req.body;
+});*/
 
 //Adding new events.
 app.post("/newEvent", (req, res) => {

@@ -7,10 +7,10 @@ import MyEvents from './components/MyEvents';
 import NewEventForm from './components/NewEventForm';
 
 
-function Mugdha() {
+function App() {
 
   return (
-      <div className='Mugdha'>
+      <div className='App'>
         <Switch>
           <Route exact path="/" component={Login} />
           <Route path="/NewEventForm" component={NewEventForm} />
@@ -22,4 +22,4 @@ function Mugdha() {
   
 }
 
-export default Mugdha;
+export default App;

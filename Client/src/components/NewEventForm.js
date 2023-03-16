@@ -12,24 +12,10 @@ function NewEventForm() {
     const [event_time, setEvent_time] = useState("");
     const [message, setMessage] = useState("");
 
-    console.log("after definig use states")
-
     let handleSubmit = async (e) => {
         console.log("Entered let")
         e.preventDefault();
         try {
-            console.log(event_id);
-
-            /*let res = await fetch("http://localhost:5000/newEvent", {
-              method: "POST",
-              body: JSON.stringify({
-                "Slno": event_id,
-                "Name": event_name,
-                "date": event_date,
-                "time": event_time,
-              }),
-            });*/
-            console.log(event_id);
             Axios.post("http://localhost:5000/newEvent", {
                 "Slno": event_id,
                 "Name": event_name,
@@ -96,3 +82,40 @@ function NewEventForm() {
 
 }
 export default NewEventForm;
+
+/*
+    const [selected, setSelected] = useState("");
+
+<select
+                        type="text"
+                        value={selected}
+                        placeholder="Select status"
+                        onChange={(e) => setEvent_time(e.target.value)}>
+                            <option value = "option 1">Yet to start</option>
+                            <option value = "option 2">In progress</option>
+                            <option value = "option 3">Finished</option>
+                    </select>
+
+    try {
+        Axios.put("http://localhost:5000/status", {
+            "selectedOption": selected,
+        }).then((response) => {
+            const res = response.data;
+            console.log("This is res" + res);
+            let resJson = res.json();
+            if (res.status === 200) {
+                setEvent_id("");
+                setEvent_name("");
+                setEvent_date("");
+                setEvent_time("");
+                setMessage("Event created successfully");
+            }
+            else {
+                setMessage("Some error occured");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+    } catch (error) {
+        console.log(error)
+    };*/

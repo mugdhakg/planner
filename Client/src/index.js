@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Router, Switch, Route, Link } from 'react-router-dom';
 
-import Mugdha from './App';
+import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     
@@ -30,6 +30,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </nav>
 
     </div>
-    <Mugdha />
+    <App />
   </BrowserRouter>
 )
