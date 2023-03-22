@@ -16,7 +16,27 @@ function MyEvents() {
     getData();
     return (
       <div>
-      <h1>My Events List</h1>
+        <nav className="navbar">
+            <ul className="nav-links">
+              <p id="one">Planner</p>
+              <Link to="/Dashboard">
+                <li>Dashboard</li>
+              </Link>
+              <Link to="/MyEvents">
+                <li>My Events</li>
+              </Link>
+              <Link to="/MyToDo">
+                <li>My To-Do</li>
+              </Link>
+              <Link to="/MyNotes">
+                <li>My Notes</li>
+              </Link>
+              <Link to="/Logout">
+                <li>Logout</li>
+              </Link>
+            </ul>
+          </nav>
+      <h1 className='myEventsList'>My Events List</h1>
       <BrowserRouter>
         <table className="my-table">
           <thead id="table_head">
@@ -31,7 +51,7 @@ function MyEvents() {
           <tbody id="table_body">
           </tbody>
         </table>
-        <button onClick={openForm}>Add new event!</button>
+        <button className="buttonOne" onClick={openForm}>Add new event!</button>
       </BrowserRouter>
       </div>
       );

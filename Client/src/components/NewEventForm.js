@@ -53,24 +53,28 @@ function NewEventForm() {
                         value={event_id}
                         placeholder="Sl. No."
                         onChange={(e) => setEvent_id(e.target.value)}
+                        className="numip"
                     />
                     <input
                         type="text"
                         value={event_name}
                         placeholder="Name"
                         onChange={(e) => setEvent_name(e.target.value)}
+                        className="textip"
                     />
                     <input
                         type="date"
                         value={event_date}
                         placeholder="Date"
                         onChange={(e) => setEvent_date(e.target.value)}
+                        className="dateip"
                     />
                     <input
                         type="time"
                         value={event_time}
                         placeholder="Time"
                         onChange={(e) => setEvent_time(e.target.value)}
+                        className="timeip"
                     />
 
                     <button type="submit">Create</button>
@@ -82,40 +86,3 @@ function NewEventForm() {
 
 }
 export default NewEventForm;
-
-/*
-    const [selected, setSelected] = useState("");
-
-<select
-                        type="text"
-                        value={selected}
-                        placeholder="Select status"
-                        onChange={(e) => setEvent_time(e.target.value)}>
-                            <option value = "option 1">Yet to start</option>
-                            <option value = "option 2">In progress</option>
-                            <option value = "option 3">Finished</option>
-                    </select>
-
-    try {
-        Axios.put("http://localhost:5000/status", {
-            "selectedOption": selected,
-        }).then((response) => {
-            const res = response.data;
-            console.log("This is res" + res);
-            let resJson = res.json();
-            if (res.status === 200) {
-                setEvent_id("");
-                setEvent_name("");
-                setEvent_date("");
-                setEvent_time("");
-                setMessage("Event created successfully");
-            }
-            else {
-                setMessage("Some error occured");
-            }
-        }).catch((error) => {
-            console.error(error);
-        });
-    } catch (error) {
-        console.log(error)
-    };*/

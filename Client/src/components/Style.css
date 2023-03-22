@@ -56,25 +56,35 @@
   background-color: #D396E2;
 }
 
-
 /*NAVBAR STYLING*/
-.navbar ul {
-  list-style-type: none;
-  margin: 10px;
-  padding: 10px;
-  overflow: hidden;
+.navbar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
   background-color: #343A5A;
-  display: flex;
-  justify-content: space-between;
 }
 
-.nav-links li {
-  float: left;
-  padding: 10px 10px;
+.nav-links ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 .nav-links a {
-  color: #FFB25E;
+  text-decoration: none;
+}
+
+.nav-links li {
+  text-decoration: none;
+  margin: 40px 15px;
+  list-style: none;
+  padding: 10px 10px;
+}
+
+.nav-links li {
+  color: white;
   text-decoration: none;
   font-size: 16px;
 }
@@ -82,13 +92,134 @@
 .nav-links li:hover {
   background-color: #BFDEE8;
   color: #343A5A;
+  text-decoration: none;
 }
 
-/*TABLE STYLINE*/
+/*BANNER STYLING*/
+.banner {
+  position: fixed;
+  height:270px;
+  width:1081px;
+  top: 0%;
+  left: 23.43%;
+  margin-top: -50px;
+  margin-left: -100px;
+  background-image: linear-gradient(to right, #BFD4E8,#825EE4);
+}
+
+.card1 {
+  position: relative;
+  top: 35%;
+  left: 5%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 18%;
+  height: 30%;
+  border-radius: 3px;
+}
+
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.two {
+  text-align: center;
+}
+
+.card2 {
+  position: relative;
+  top: -2%;
+  left: 30%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 18%;
+  height: 30%;
+  border-radius: 3px;
+}
+
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card3 {
+  position: relative;
+  top: -39%;
+  left: 55%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 18%;
+  height: 30%;
+  border-radius: 3px;
+}
+
+.card3:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card4 {
+  position: relative;
+  top: -76%;
+  left: 80%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 18%;
+  height: 30%;
+  border-radius: 3px;
+}
+
+.card4:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.eventCard {
+  position: fixed;
+  top: 30%;
+  left: 20%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 45%;
+  height: 60%;
+  border-radius: 3px;
+  overflow: auto;
+}
+
+.eventCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.todoCard {
+  position: fixed;
+  top: 30%;
+  left: 68%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%;
+  height: 60%;
+  border-radius: 3px;
+  overflow: auto;
+}
+
+.todoCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*TABLE STYLING*/
+
+.myEventsList {
+  margin-left: 200px;
+}
+
 .my-table {
   margin-top: 10px;
+  margin-left: 200px;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
   font-family: Arial, sans-serif;
   font-size: 14px;
 }
@@ -102,30 +233,168 @@
 
 #table_head {
   /*background-color: #123524;*/
-  background-color: rgb(79, 121, 66);
-  color: #333;
+  background-color: #343A5A;
+  color: white;
   font-weight: bold;
   text-align: center;
 }
 
 .my-table tbody tr:nth-child(even) {
-  background-color: #96A691;
+  background-color: #BFDEE8;
 }
 
 .buttonOne {
+  margin-left: 230px;
   margin-top: 10px;
-  background-color: #96A691;
-  color: black;
+  background-color: #343A5A;
+  color: white;
   font-size: 12px;
   border: none;
   padding: 10px 10px;
   border-radius: 5px;
 }
 
+/*NEW EVENT FORM STYLING*/
+.addEvent input[type=number] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-left: 170px;
+  box-sizing: border-box;
+}
+
+.addEvent input[type=text] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-left: 170px;
+  box-sizing: border-box;
+}
+
+.addEvent input[type=date] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-left: 170px;
+  box-sizing: border-box;
+}
+
+.addEvent input[type=time] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-left: 170px;
+  box-sizing: border-box;
+}
+
+.addEvent button[type=submit] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-left: 170px;
+  box-sizing: border-box;
+  background-color: #FFB25E;
+}
+
 #one {
-  text-align: center;
-  font-family: fantasy;
-  font-style: italic;
-  color: #FFB25E;
+  margin: 25px;
+  font-family: open-sans;
+  font-style: bold;
+  color: white;
   font-size: 25px;
+}
+
+/*TO-DO LIST STYLING NEW*/
+.header {
+  width: 79.3%;
+  margin: 0px;
+  background-color: #343A5A;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#myUL {
+  margin: 0px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+#myUL li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+#myUL li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+#myUL li:hover {
+  background: #ddd;
+}
+
+/* Style the close button */
+.close {
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the input */
+#myInput {
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+  width: 65%;
+  height: 10px;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  background-color: #BFDEE8;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background: #d9d9d9;
+  color: #555;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
 }

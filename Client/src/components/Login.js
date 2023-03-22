@@ -1,7 +1,7 @@
 import { Link, BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'; 
 import { useState } from 'react';
 import Axios from 'axios';
-import MyEvents from './MyEvents';
+import Dashboard from './Dashboard';
 import { useHistory } from 'react-router-dom';
 
 function Login () {
@@ -25,7 +25,7 @@ function Login () {
       else {
         setLoginStatus(response.data[0].username)
         localStorage.setItem('loggedIn', true);
-        history.push('./MyEvents');
+        history.push('./Dashboard');
       }
     });
   };
