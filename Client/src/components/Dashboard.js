@@ -5,6 +5,8 @@ import { useHistory, useEffect, useState } from 'react-router-dom';
 import './Style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { faSignOut } from '@fortawesome/free-solid-svg-icons';
 
 
 console.log("Dashboard component is routed correctly.")
@@ -17,56 +19,41 @@ function Dashboard() {
     history.push('./NewEventForm');
   }
   getData();
+
     return (
       <div>
         <BrowserRouter>
           <nav className="navbar">
-            <ul className="nav-links">
-              <p id="one">Planner</p>
+            <p id="one">PLANNER</p>
+            <hr></hr>
+            <ul className="nav-links">  
               <Link to="/Dashboard">
                 <FontAwesomeIcon icon={ faHome } className="icon"></FontAwesomeIcon>
                 <li>Dashboard</li>
               </Link>
-              <Link to="/MyEvents">
-                <li>My Events</li>
-              </Link>
-              <Link to="/MyToDo">
-                <li>My To-Do</li>
+              <Link to="/NewEventForm">
+                <FontAwesomeIcon icon={ faCalendar } className="icon"></FontAwesomeIcon>
+                <li>Create New Event</li>
               </Link>
               <Link to="/">
+                <FontAwesomeIcon icon={ faSignOut } className="icon"></FontAwesomeIcon>
                 <li>Logout</li>
               </Link>
             </ul>
           </nav>
-          <div className="banner">
-            <div className='card1'>
-              <h3 className='two'>My Events</h3>
-              <p className='two'>5</p>
-            </div>
-            <div className='card2'>
-              <h3 className='two'>To-Do</h3>
-              <p className='two'>5</p>
-            </div>
-            <div className='card3'>
-              <h3 className='two'>Notes</h3>
-              <p className='two'>5</p>
-            </div>
-            <div className='card4'>
-              <h3 className='two'>One More</h3>
-              <p className='two'>5</p>
-            </div>
+          <div className='banner'>
+
           </div>
           <div className="eventCard">
             <div>
-              <h3>My Events List</h3>
+              <p className='three'>My Events List</p>
               <table className="my-table">
               <thead id="table_head">
               <tr>
-                <th>Event ID</th>
-                <th>Event Name</th>
-                <th>Event Date</th>
-                <th>Event Time</th>
-                <th>Status</th>
+                <th>EVENT ID</th>
+                <th>EVENT NAME</th>
+                <th>EVENT DATE</th>
+                <th>EVENT TIME</th>
               </tr>
               </thead>
               <tbody id="table_body">
@@ -77,17 +64,19 @@ function Dashboard() {
           </div>
             <div className="todoCard">
               <div id="myDIV" className="header">
-                <h2>To Do</h2>
+                <p className='four'>To Do</p>
+                <hr className='line'></hr>
               </div>
               <ul id="myUL">
-                <li>Water the plants</li>
-                <li>Go on a run</li>
-                <li>Make web app design</li>
-                <li>Book movie tickets online</li>
+                <li id="myUL">Water the plants</li>
+                <li id="myUL">Go on a run</li>
+                <li id="myUL">Make web app design</li>
+                <li id="myUL">Book movie tickets online</li>
               </ul>
               <div>
-                <input type="text" id="myInput" placeholder="Title..."></input>
-                <span onClick={newElement} className="addBtn">Add</span> 
+                <hr className='five'></hr>
+                <input type="text" id="myInput" placeholder="New To-do..."></input>
+                <div onClick={newElement} className="addBtn">Add</div> 
               </div>
             </div>
         </BrowserRouter>
@@ -108,7 +97,6 @@ function Dashboard() {
       <td>${values.event_name}</td>
       <td>${values.event_date}</td>
       <td>${values.event_time}</td>
-      <td>${values.status}</td>
       </tr>`
       });
       document.getElementById("table_body").innerHTML = tableData;
@@ -156,13 +144,31 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
+  
+  var k;
+  for (k = 0; k < close.length; k++) {
+    close[k].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
     }
   }
 }
 
-  export default Dashboard;
+export default Dashboard;
+
+/** <div className='card1'>
+              <h3 className='two'>My Events</h3>
+              <p className='two'>5</p>
+            </div>
+            <div className='card2'>
+              <h3 className='two'>To-Do</h3>
+              <p className='two'>5</p>
+            </div>
+            <div className='card3'>
+              <h3 className='two'>Notes</h3>
+              <p className='two'>5</p>
+            </div>
+            <div className='card4'>
+              <h3 className='two'>One More</h3>
+              <p className='two'>5</p>
+            </div>   */

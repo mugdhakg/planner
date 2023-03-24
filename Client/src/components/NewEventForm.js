@@ -2,7 +2,8 @@ import { BrowserRouter, Router, Switch, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Axios from 'axios';
-
+import React from 'react'
+import Select from 'react-select'
 
 function NewEventForm() {
     console.log("Entering new event")
@@ -45,6 +46,7 @@ function NewEventForm() {
 
         console.log("Before html return");
 
+          
         return (
             <div className="addEvent">
                 <form onSubmit={handleSubmit}>
@@ -77,6 +79,7 @@ function NewEventForm() {
                         className="timeip"
                     />
 
+                    
                     <button type="submit">Create</button>
 
                     <div className="message">{message ? <p>{message}</p> : null}</div>
