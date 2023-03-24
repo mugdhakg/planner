@@ -72,7 +72,7 @@ app.post("/login", (req, res) => {
         res.send(result);
       }
       else {
-        res.send({ message: "Wrong username/password." });
+        res.send({ message: "Wrong username/password. Please try again." });
       }
     }
   );
